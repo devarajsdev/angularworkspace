@@ -1,0 +1,35 @@
+<!-- <p>reactiveforms works!</p> -->
+<h1 *ngIf="success" style="color:greenyellow">Stadium Successfully Saved</h1>
+<form class="container" [formGroup]=stadium>
+    <h2>Stadium Details</h2>
+    REMOVE:{{stadium.value |json}}<br>
+    status:{{stadium.status}}
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control col-sm-6" id="name" formControlName="name" />
+        <div *ngIf="fc.name.invalid && (fc.name.touched)">
+      
+                <span style="color: red" *ngIf="fc.name.errors.minlength">Invalid Name Length</span>
+                <span style="color: red" *ngIf="fc.name.errors.required">Name is Required</span>
+            </div>
+    </div>
+   
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input class="form-control col-sm-6" id="location" formControlName="location" />
+    </div>
+    <div class="form-group">
+        <label for="since">Since</label>
+        <input class="form-control col-sm-6" id="since" formControlName="since" />
+    </div>
+    <div class="form-group">
+        <label for="type">Type</label>
+        <input class="form-control col-sm-6" id="type" formControlName="type" />
+    </div>
+
+    <button class="btn btn-success" (click)=onSubmit()>Submit</button>
+
+    <button class="btn btn-danger">Cancel</button>
+
+</form>

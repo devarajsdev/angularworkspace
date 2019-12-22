@@ -1,0 +1,39 @@
+<!-- <p>statue works!</p> -->
+<div class="container">
+    <form #formRef="ngForm">
+        <!-- TODO REMOVE:{{formRef | json}} -->
+        <div class="form-group">
+            <label for="locationid" >Location</label>
+            <input class="form-control" id="locationid" name="loc" [(ngModel)]="smodel.Location" #locModel="ngModel"
+            required minlength="3" maxlength="20"/>
+            <div *ngIf="locModel.invalid">
+                <div class="color:red">
+                    <span *ngIf="locModel.errors.required">Location is required</span>
+                    <span *ngIf="locModel.errors.minlength">Enter min 3 chars</span>
+                    <!-- <span *ngIf="locModel.errors.touched">Enter min 3 chars</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+                <label >Height</label>
+                <input class="form-control" name="height" [(ngModel)]="smodel.Height"/>
+            </div>
+            <div class="form-group">
+                    <label >Design</label>
+                    <input class="form-control" name="design" [(ngModel)]="smodel.Design"/>
+                </div>
+                <label>Frozen Items</label>
+        <select>
+            <option *ngFor="let item of frozen">{{item}}</option>
+        </select>
+                <div class="form-group">
+                        <label >Description</label>
+                        <input class="form-control" name="desc" [(ngModel)]="smodel.Description"/>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" [disabled]="formRef.invalid" class="btn btn-primary"/>
+                        <input type="button" value="Debug" (click)="debug(formRef)" class="btn btn-primary"/>
+                    </div>
+    </form>
+
+</div>

@@ -1,0 +1,25 @@
+<p>person works!</p>
+
+<button (click)="createProducer()">Create Producer(Obervable)</button>
+
+<button (click)="sub1()">Subscriber 1</button>
+
+<button (click)="sub2()">Subscriber 2</button>
+
+<button (click)="displayDetails()">Display Details</button>
+
+<button (click)="onShipDetails()">Ship Details</button>
+Name:{{person.name}}
+email:{{person.email}}
+
+<div>
+    <th>Ship Details</th>
+    <table >
+    <tr *ngFor="let ship of shipList">
+    <td>{{ship.model}}</td>
+    <td>{{ship.govt}}</td>
+    <td>{{ship.mfgby}}</td>
+    <td>{{ship.noofPassengers}}</td>
+</tr>
+</table>
+</div>

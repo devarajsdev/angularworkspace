@@ -1,0 +1,31 @@
+<p>rowdy works!</p>
+
+<form class="form-container" (ngSubmit)="onSaveInfo()">
+    <div class="form-group">
+        <label>Name</label>
+        <input name="name" class="form-control col-sm-6 " [(ngModel)]="model.name"/>
+    </div>
+    <div>
+        <label>Area</label>
+        <input name="area" class="form-control col-sm-6" [(ngModel)]="model.area" />
+    </div>
+    <div>
+        <label>Cases</label>
+        <input name="cases" class="form-control col-sm-6" [(ngModel)]="model.cases"/>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <button (click)="onFetch()" type="button" class="btn btn-success">Fetch</button>
+    
+</form>
+<div>
+    <th>Rowdy Details</th>
+    <table >
+    <tr *ngFor="let rowdy of rowdyList">
+    <td>{{rowdy.name}}</td>
+    <td>{{rowdy.area}}</td>
+    <td>{{rowdy.cases}}</td>
+    
+</tr>
+</table>
+</div>

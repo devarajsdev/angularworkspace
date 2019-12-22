@@ -1,0 +1,25 @@
+<form class="container">
+    TODO REMOVE:{{nmodel | json}}
+    <div class="form-grp">
+        <label>Candidate Name</label>
+        <input type="text" class="form-control" id="candidateName" name="candidateName" [(ngModel)]="nmodel.candidateName" />
+    </div>
+    <div class="form-grp">
+        <label>Party</label>
+        <select class="form-control" id="party" name="party" [(ngModel)]="nmodel.party" >
+            <option>BJP</option>
+            <option>Prajakeeya</option>
+            <option>JDS</option>
+            </select>
+    </div>
+    <div class="form-grp">
+        <label>Constituency</label>
+        <input type="text" class="form-control" id="constituency" name="constituency" [(ngModel)]="nmodel.constituency" />
+    </div>
+    <div class="form-grp">
+        <label>Assets</label>
+        <input type="text" class="form-control" id="assets" name="assets" [(ngModel)]="nmodel.assets" />
+    </div>
+
+    <button class="btn btn-primary">Apply</button>
+</form>

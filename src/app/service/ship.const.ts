@@ -1,0 +1,1 @@
+export const SHIP_URI="assets/ship.json";

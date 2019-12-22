@@ -1,0 +1,21 @@
+[{
+    "model":"INS VIRAT",
+    "mfgby":"GOI",
+    "noofPassengers":500,
+    "govt":true
+},{"model":"INS Vikrant",
+    "mfgby":"GOI",
+    "noofPassengers":500,
+    "govt":true
+
+},{"model":"Luxuruy Cruise",
+    "mfgby":"CanadaShips",
+    "noofPassengers":300,
+    "govt":false
+
+},{"model":"Japang Cruise",
+    "mfgby":"ProShips",
+    "noofPassengers":200,
+    "govt":false
+    
+}]
